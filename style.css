@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+body {
+    font-family: "Muli", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333333;
+    --text-color: #1cf210;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 400px;
+}
+
+/* dark mode toggle */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 24px;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #999;
+    border-radius: 34px;
+    cursor: pointer;
+    height: 16px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 32px;
+}
+
+.slider:before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    transition: transform 0.3s ease;
+    width: 24px;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+/* Button Hover Animation */
+.btn {
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}

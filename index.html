@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <!-- dark mode toggle -->
+    <nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Switch Theme</em>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <textarea id="PasswordResult"></textarea>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label>Password length</label>
+                <input type="number" id="Passwordlength" min="4" max="20" value="8" />
+            </div>
+            <div class="setting">
+                <label>Include uppercase letters</label>
+                <input type="checkbox" id="uppercase" checked />
+            </div>
+            <div class="setting">
+                <label>Include lowercase letters</label>
+                <input type="checkbox" id="lowercase" checked />
+            </div>
+            <div class="setting">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked />
+            </div>
+            <div class="setting">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked />
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-large" id="generateBtn">
+                <i class="fas fa-key"></i> Generate
+            </button>
+            <button class="btn" id="clipboardBtn">
+                <i class="far fa-clipboard"></i> Copy
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+</body>
+</html>
